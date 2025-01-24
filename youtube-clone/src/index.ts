@@ -36,7 +36,7 @@ app.post('/process-video', async (req, res) => {
 
   // Download the raw video from Cloud Storage
   await downloadRawVideo(inputFileName);
-
+  console.log("DOWNLOAD")
   // Process the video into 360p
   try { 
     await convertVideo(inputFileName, outputFileName)
